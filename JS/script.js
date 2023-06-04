@@ -1,19 +1,17 @@
 {
-    const tasks = [
-        {
-            content: "Prepare dinner",
-            done: true,
-        },
-        {
-            content: "Finish project",
-            done: false,
-        },
-    ]
+    const tasks = [];
+
+    const setFocusOnInput = () => {
+        document.querySelector(".js-newTask").focus();
+    }
+
+    const clearTextInput = () => {
+        document.querySelector(".js-newTask").value = "";
+    }
 
     const addNewTask = (newTask) => {
         tasks.push({ content: newTask });
-        document.querySelector(".js-newTask").value = "";
-        document.querySelector(".js-newTask").focus();
+        clearTextInput();
         render();
     }
 
@@ -29,6 +27,7 @@
 
     const onFormSubmit = (event) => {
         event.preventDefault();
+        setFocusOnInput();
         const newTask = document.querySelector(".js-newTask").value.trim();
 
         if (newTask === "") {
