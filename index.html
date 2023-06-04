@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <link href="CSS/style.css" rel="stylesheet">
+    <link href="CSS/body.css" rel="stylesheet">
+    <link href="CSS/container.css" rel="stylesheet">
+
+    <script defer src="JS/script.js"></script>
+    <title>Tasks list</title>
+</head>
+
+<body class="body">
+    <header class="header">
+        <h1 class="header__title">Tasks list</h1>
+    </header>
+
+    <div class="container">
+        <section class="section">
+            <h2 class="section__header">Add new task</h2>
+            <form class="form">
+                <input class="form__textInput js-newTask">
+                <button class="form__submitButton js-addNewTask">Add task</button>
+            </form>
+        </section>
+        <section class="section">
+            <h2 class="section__header">Tasks list</h2>
+            <ul class="section__tasks js-tasks">
+                <li>x</li>
+            </ul>
+        </section>
+    </div>
+
+</body>
+
+</html>
