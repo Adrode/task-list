@@ -3,4 +3,7 @@
     max-width: 600px;
     margin: 40px auto;
     background-color: #eee;
+
+    display: flex;
+    flex-direction: column;
 }

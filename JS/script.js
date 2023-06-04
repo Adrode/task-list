@@ -2,7 +2,7 @@
     const tasks = [
         {
             content: "Prepare dinner",
-            done: false,
+            done: true,
         },
         {
             content: "Finish project",
@@ -14,7 +14,9 @@
         let htmlString = "";
 
         for(const task of tasks) {
-            htmlString += `<li>${task.content}</li>`;
+            htmlString += `
+            <li ${task.done ? "style=\"text-decoration: line-through\"" : ""}
+            >${task.content}</li>`;
         }
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
