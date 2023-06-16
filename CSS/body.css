@@ -4,4 +4,6 @@
     margin: 40px auto;
     padding: 0 20px;
     background-color: #eee;
+    overflow: auto;
+    word-break: break-word;
 }
