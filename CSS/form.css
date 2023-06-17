@@ -1,5 +1,7 @@
 .form {
     background-color: #fff;
+    padding: 20px;
+    gap: 20px;
 
     display: flex;
     align-items: center;
@@ -15,21 +17,20 @@
 }
 
 .form__textInput {
-    margin: 20px;
-    padding: 10px;
+    padding: 8px;
+    border: 1px solid #aaa;
     flex-grow: 1;
     overflow: auto;
 }
 
 .form__submitButton {
-    margin: 20px;
-    padding: 12px;
+    padding: 8px;
     border: 1px solid teal;
     background-color: teal;
     color: white;
 
     display: flex;
-    flex-basis: 150px;
+    flex-basis: 100px;
     align-items: center;
     justify-content: center;
 }
