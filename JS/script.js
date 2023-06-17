@@ -1,17 +1,9 @@
 {
     const tasks = [];
+    const taskElement = document.querySelector(".js-newTask");
 
-    const setFocusOnInput = () => {
-        document.querySelector(".js-newTask").focus();
-    }
-
-    const clearTextInput = () => {
-        document.querySelector(".js-newTask").value = "";
-    }
-
-    const addNewTask = (newTask) => {
-        tasks.push({ content: newTask });
-        clearTextInput();
+    const addNewTask = (trimmedTaskValue) => {
+        tasks.push({ content: trimmedTaskValue });
         render();
     }
 
@@ -27,14 +19,15 @@
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        setFocusOnInput();
-        const newTask = document.querySelector(".js-newTask").value.trim();
-
-        if (newTask === "") {
+        const trimmedTaskValue = taskElement.value.trim();
+        taskElement.focus();
+        
+        if (trimmedTaskValue === "") {
             return;
         }
 
-        addNewTask(newTask);
+        addNewTask(trimmedTaskValue);
+        taskElement.value = "";
     }
 
     const addEvents = () => {
