@@ -1,0 +1,49 @@
+.list__tasksList {
+    background-color: #fff;
+    padding: 20px;
+    margin: 0;
+    overflow: auto;
+}
+
+.list__listItem {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    padding: 20px;
+    border-bottom: 2px solid #eee;
+    align-items: center;
+}
+
+.list__tasksList--done {
+    text-decoration: line-through;
+}
+
+.list__listButton {
+    min-width: 30px;
+    min-height: 30px;
+    border: 1px solid green;
+    background-color: green;
+}
+
+.list__listButton--displayDone {
+    background-image: url("../IMAGES/doneIcon.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.list__listButton:active {
+    border: 1px solid #eee;
+}
+
+.list__taskData {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.list__listButton--changedBackground {
+    border: 1px solid red;
+    background-color: red;
+    background-image: url("../IMAGES/trashIcon.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}

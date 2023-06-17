@@ -1,0 +1,49 @@
+.form {
+    background-color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+    .form {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+}
+
+.form__textInput {
+    margin: 20px;
+    padding: 10px;
+    flex-grow: 1;
+    overflow: auto;
+}
+
+.form__submitButton {
+    margin: 20px;
+    padding: 12px;
+    border: 1px solid teal;
+    background-color: teal;
+    color: white;
+
+    display: flex;
+    flex-basis: 150px;
+    align-items: center;
+    justify-content: center;
+}
+
+.form__submitButton:hover {
+    background-color: hsl(180, 100%, 27%);
+}
+
+.form__submitButton:active {
+    border: 1px solid #eee;
+}
+
+@media (max-width: 767px) {
+    .form__submitButton {
+        flex-basis: 100%;
+    }
+}
