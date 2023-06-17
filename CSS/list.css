@@ -5,16 +5,16 @@
     overflow: auto;
 }
 
+.list__listItem--done {
+    text-decoration: line-through;
+}
+
 .list__listItem {
     display: grid;
     grid-template-columns: auto 1fr auto;
-    padding: 20px;
+    padding: 10px;
     border-bottom: 2px solid #eee;
     align-items: center;
-}
-
-.list__tasksList--done {
-    text-decoration: line-through;
 }
 
 .list__listButton {
