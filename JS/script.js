@@ -1,19 +1,29 @@
 {
-    const tasks = [];
+    let tasks = [];
     const taskElement = document.querySelector(".js-newTask");
 
     const addNewTask = (trimmedTaskValue) => {
-        tasks.push({ content: trimmedTaskValue });
+        tasks = [
+            ...tasks,
+            { content: trimmedTaskValue },
+        ];
         render();
     }
 
     const removeTask = (taskIndex) => {
-        tasks.splice(taskIndex, 1);
+        tasks = [
+            ...tasks.slice(0, taskIndex),
+            ...tasks.slice(taskIndex + 1),
+        ];
         render();
     }
 
     const setTaskDone = (taskIndex) => {
-        tasks[taskIndex].done = !tasks[taskIndex].done;
+        /*tasks[taskIndex].done = !tasks[taskIndex].done;*/
+        tasks = [
+            ...tasks,
+            tasks.map(tasks => !tasks[taskIndex].done),
+        ];
         render();
     }
 
@@ -21,7 +31,7 @@
         event.preventDefault();
         const trimmedTaskValue = taskElement.value.trim();
         taskElement.focus();
-        
+
         if (trimmedTaskValue === "") {
             return;
         }
