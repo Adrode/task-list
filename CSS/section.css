@@ -5,11 +5,30 @@
     margin-bottom: 10px;
 }
 
-.section__title {
+.section__header {
     background-color: #fff;
+}
+
+.section__container {
     padding: 20px;
     margin: 0;
 
     display: flex;
     align-items: center;
+}
+
+.section__header--featureButtons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section__featureButton {
+    border: none;
+    background-color: transparent;
+    color: #AAA;
+    transition: color 0.3s;
+}
+
+.section__featureButton:hover {
+    color: #000;
 }

@@ -33,10 +33,13 @@
     flex-basis: 100px;
     align-items: center;
     justify-content: center;
+
+    transition: 0.3s;
 }
 
 .form__submitButton:hover {
     background-color: hsl(180, 100%, 27%);
+    transform: scale(1.05);
 }
 
 .form__submitButton:active {

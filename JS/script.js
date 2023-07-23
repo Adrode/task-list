@@ -31,6 +31,20 @@
         render();
     }
 
+    const setAllTasksDone = () => {
+        tasks = tasks.map((task) => ({
+            ...task,
+            done: true,
+        }));
+
+        render();
+    }
+
+    const toggleHideDoneTasks = () => {
+        hideTasks = !hideTasks;
+        render();
+    }
+
     const onFormSubmit = (event) => {
         event.preventDefault();
         const trimmedTaskValue = taskElement.value.trim();
@@ -60,12 +74,21 @@
         });
     }
 
+    const renderButtons = () => {
+        let buttonsHTML = `
+        <button class="js-hideDoneTasks section__featureButton">Hide done tasks</button>
+        <button class="js-markAllTasksDone section__featureButton">Mark all tasks as done</button>
+        `;
+
+        document.querySelector(".js-featureButtons").innerHTML = buttonsHTML;
+    }
+
     const render = () => {
         let htmlString = "";
 
         for (const task of tasks) {
             htmlString += `
-            <li class="list__listItem ${hideTasks ? "list__listItem--hidden" : ""}">
+            <li class="list__listItem ${hideTasks && hideTasks ? "list__listItem--hidden" : ""}">
             <button class="js-done list__listButton">${task.done ? "✔" : ""}</button>
             <span class="list__taskData ${task.done ? " list__taskData--done" : ""}">${task.content}</span>
             <button class="js-remove list__listButton list__listButton--changedBackground">🗑</button>
@@ -75,6 +98,7 @@
         document.querySelector(".js-tasks").innerHTML = htmlString;
 
         addEvents();
+        renderButtons();
     }
 
     const init = () => {
