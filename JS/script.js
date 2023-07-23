@@ -1,5 +1,6 @@
 {
     let tasks = [];
+    let hideTasks = false;
     const taskElement = document.querySelector(".js-newTask");
 
     const addNewTask = (trimmedTaskValue) => {
@@ -64,12 +65,12 @@
 
         for (const task of tasks) {
             htmlString += `
-            <li class="list__listItem">
+            <li class="list__listItem ${hideTasks ? "list__listItem--hidden" : ""}">
             <button class="js-done list__listButton">${task.done ? "✔" : ""}</button>
             <span class="list__taskData ${task.done ? " list__taskData--done" : ""}">${task.content}</span>
             <button class="js-remove list__listButton list__listButton--changedBackground">🗑</button>
             </li>`;
-        }
+        };
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
 
