@@ -64,10 +64,10 @@
 
         for (const task of tasks) {
             htmlString += `
-            <li class="list__listItem${task.done ? " list__listItem--done" : ""}">
-            <button class="js-done list__listButton${task.done ? " list__listButton--displayDone" : ""}"></button>
-            <span class="list__taskData">${task.content}</span>
-            <button class="js-remove list__listButton list__listButton--changedBackground"></button>
+            <li class="list__listItem">
+            <button class="js-done list__listButton">${task.done ? "✔" : ""}</button>
+            <span class="list__taskData ${task.done ? " list__taskData--done" : ""}">${task.content}</span>
+            <button class="js-remove list__listButton list__listButton--changedBackground">🗑</button>
             </li>`;
         }
 

@@ -5,10 +5,6 @@
     overflow: auto;
 }
 
-.list__listItem--done {
-    text-decoration: line-through;
-}
-
 .list__listItem {
     display: grid;
     grid-template-columns: auto 1fr auto;
@@ -22,12 +18,7 @@
     min-height: 30px;
     border: 1px solid green;
     background-color: green;
-}
-
-.list__listButton--displayDone {
-    background-image: url("../IMAGES/doneIcon.png");
-    background-size: cover;
-    background-repeat: no-repeat;
+    color: white;
 }
 
 .list__listButton:active {
@@ -40,10 +31,11 @@
     padding: 0 10px;
 }
 
+.list__taskData--done {
+    text-decoration: line-through;
+}
+
 .list__listButton--changedBackground {
     border: 1px solid red;
     background-color: red;
-    background-image: url("../IMAGES/trashIcon.png");
-    background-size: cover;
-    background-repeat: no-repeat;
 }
