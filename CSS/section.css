@@ -7,6 +7,8 @@
 
 .section__header {
     background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .section__container {

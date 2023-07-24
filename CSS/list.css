@@ -13,6 +13,10 @@
     align-items: center;
 }
 
+.list__listItem--hidden {
+    display: none;
+}
+
 .list__listButton {
     min-width: 30px;
     min-height: 30px;
