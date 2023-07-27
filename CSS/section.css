@@ -21,11 +21,31 @@
     flex-wrap: wrap;
 }
 
+@media (max-width: 767px) {
+    .section__container {
+        flex-basis: 100%;
+    }
+}
+
+.section__container--hidden {
+    height: 0px;
+    padding: 0px;
+}
+
 .section__featureButton {
+    margin-left: 20px;
+    padding: 0;
     border: none;
     background-color: transparent;
     color: #AAA;
     transition: color 0.3s;
+}
+
+@media (max-width: 767px) {
+    .section__featureButton {
+        flex-basis: 100%;
+        margin: 10px;
+    }
 }
 
 .section__featureButton:hover {
