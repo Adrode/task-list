@@ -92,8 +92,11 @@
 
         if (!tasks.length) {
             featureButtons.innerHTML = "";
+            featureButtons.classList.add("section__container--hidden");
             return;
         }
+
+        featureButtons.classList.remove("section__container--hidden");
 
         featureButtons.innerHTML = `
             <button class="js-hideDoneTasks section__featureButton">
