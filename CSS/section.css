@@ -9,6 +9,7 @@
     background-color: #fff;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .section__container {
@@ -17,11 +18,7 @@
 
     display: flex;
     align-items: center;
-}
-
-.section__header--featureButtons {
-    display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .section__featureButton {
