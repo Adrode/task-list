@@ -37,7 +37,7 @@
     padding: 0;
     border: none;
     background-color: transparent;
-    color: #666;
+    color: teal;
     transition: color 0.3s;
 }
 
@@ -49,7 +49,7 @@
 }
 
 .section__featureButton:hover {
-    color: #000;
+    color: hsl(180, 100%, 35%);
 }
 
 .section__featureButton:disabled {
