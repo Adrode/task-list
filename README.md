@@ -1,8 +1,8 @@
-# task-list
+# Tasks list
 
 ## *[To-do list app](https://adrode.github.io/task-list/)*
 
-![pageScreenshot](IMAGES/taskListPageScreenshot.png)
+![pageScreenshot](IMAGES/taskListPageScreenshotUpdate1.png)
 
 You can add tasks to your to-do list. You can also mark tasks as done and remove any tasks from the list.
 
@@ -14,9 +14,12 @@ Tasks are added to the list using JavaScript. The code retrieves the text conten
     - Webpage Icon
 - CSS
     - Flex / Grid
-    - Background images
+    - Media Queries
+    - Transition, Transform
+    - Pseudo-classes
 - JS
     - Arrow functions
     - .addEventListener() method
     - Arrays
     - Objects
+    - Immutability
