@@ -79,18 +79,18 @@
 
         if (!tasks.length) {
             featureButtons.innerHTML = "";
-            featureButtons.classList.add("section__container--hidden");
+            featureButtons.classList.add("buttons__container--hidden");
             return;
         }
 
-        featureButtons.classList.remove("section__container--hidden");
+        featureButtons.classList.remove("buttons__container--hidden");
 
         featureButtons.innerHTML = `
-            <button class="js-hideDoneTasks section__featureButton">
+            <button class="js-hideDoneTasks buttons__featureButton">
                 ${hideTasks ? "Show" : "Hide"} done tasks
             </button>
             <button
-                class="js-setAllTasksDone section__featureButton"
+                class="js-setAllTasksDone buttons__featureButton"
                 ${ tasks.every(({ done }) => done) ? " disabled" : "" }
             >
                 Mark all tasks as done
