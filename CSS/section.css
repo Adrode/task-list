@@ -37,7 +37,7 @@
     padding: 0;
     border: none;
     background-color: transparent;
-    color: #AAA;
+    color: #666;
     transition: color 0.3s;
 }
 
@@ -50,4 +50,8 @@
 
 .section__featureButton:hover {
     color: #000;
+}
+
+.section__featureButton:disabled {
+    color: #AAA;
 }

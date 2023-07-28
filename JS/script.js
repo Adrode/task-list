@@ -115,13 +115,13 @@
     }
 
     const bindFeatureButtonsEvents = () => {
-        const setAllTasksDoneButton = document.querySelector("js-setAllTasksDone");
+        const setAllTasksDoneButton = document.querySelector(".js-setAllTasksDone");
 
         if (setAllTasksDoneButton) {
             setAllTasksDoneButton.addEventListener("click", setAllTasksDone);
         }
 
-        const hideDoneTasksButton = document.querySelector("js-hideDoneTasks");
+        const hideDoneTasksButton = document.querySelector(".js-hideDoneTasks");
 
         if (hideDoneTasksButton) {
             hideDoneTasksButton.addEventListener("click", toggleHideDoneTasks);
