@@ -1,7 +1,6 @@
 {
     let tasks = [];
     let hideTasks = false;
-    const taskElement = document.querySelector(".js-newTask");
 
     const addNewTask = (trimmedTaskValue) => {
         tasks = [
@@ -46,6 +45,8 @@
 
     const onFormSubmit = (event) => {
         event.preventDefault();
+
+        const taskElement = document.querySelector(".js-newTask");
         const trimmedTaskValue = taskElement.value.trim();
         taskElement.focus();
 
@@ -71,7 +72,7 @@
                 </button>
             </li>`;
 
-        document.querySelector(".js-tasks").innerHTML  = tasks.map(taskToHTML).join("");
+        document.querySelector(".js-tasks").innerHTML = tasks.map(taskToHTML).join("");
     }
 
     const renderButtons = () => {
@@ -91,7 +92,7 @@
             </button>
             <button
                 class="js-setAllTasksDone buttons__featureButton"
-                ${ tasks.every(({ done }) => done) ? " disabled" : "" }
+                ${tasks.every(({ done }) => done) ? " disabled" : ""}
             >
                 Mark all tasks as done
             </button>
